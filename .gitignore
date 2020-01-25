@@ -1,0 +1,11 @@
+# Node modules
+backend/node_modules
+
+# Adonis directory for storing tmp files
+backend/tmp
+
+# Environment variables, never commit this file
+backend/.env
+
+# The development sqlite file
+backend/database/*.sqlite

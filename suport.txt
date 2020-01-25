@@ -1,0 +1,16 @@
+npm install -g @adonisjs/cli: instala a cli do adonis
+
+adonis new <nome> --api-only: cria um projeto sem views
+
+adonis serve --dev: coloca o servidor online em modo de desenvolvimento.
+Faz o restart a cada alteração.
+
+npm i --save pg: seta o banco de dados como postgres
+
+adonis migration:run: roda as migrations
+
+adonis migration:rollback: desfaz as últimas migrations
+
+
+
+ 

@@ -1,0 +1,32 @@
+version: "3.7"
+
+services: 
+   db:
+      image: postgres
+      container_name: beauty_db
+      environment: 
+         POSTGRES_USER: admin
+         POSTGRES_PASSWORD: admin
+      ports: 
+         - "5432:5432"
+      volumes: 
+         - ./data
+      networks:
+         - beauty-network
+
+   node:
+      build: .
+      command: "adonis serve --dev"
+      container_name: beauty_node
+      ports: 
+         - "3000:3000"
+      volumes: 
+         - .:/usr/app
+      depends_on:
+         - db
+      networks:
+         - beauty-network
+
+networks: 
+   beauty-network:
+      driver: bridge
